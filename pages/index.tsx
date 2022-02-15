@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import Image from 'next/image';
+
+import { MainNavigation } from '../components/layout/MainNavigation/MainNavigation';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <meta name="description" content="App to manage your clients" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <MainNavigation />
 
       <main>
         <h1>MyClients</h1>
