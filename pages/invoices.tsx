@@ -11,7 +11,7 @@ export default function InvoicesPage() {
       <MainNavigation />
 
       <MainLayout>
-        <h1>Invoices</h1>
+        <h1 className="text-3xl font-bold">Invoices</h1>
       </MainLayout>
     </>
   );

@@ -11,7 +11,7 @@ export default function ClientsPage() {
       <MainNavigation />
 
       <MainLayout>
-        <h1>Clients</h1>
+        <h1 className="text-3xl font-bold">Clients</h1>
       </MainLayout>
     </>
   );

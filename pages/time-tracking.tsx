@@ -11,7 +11,7 @@ export default function TimeTrackingPage() {
       <MainNavigation />
 
       <MainLayout>
-        <h1>Time tracking</h1>
+        <h1 className="text-3xl font-bold">Time tracking</h1>
       </MainLayout>
     </>
   );
