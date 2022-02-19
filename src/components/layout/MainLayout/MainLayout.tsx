@@ -1,7 +1,13 @@
 import styled from 'styled-components';
+import { MainNavigation } from '../MainNavigation/MainNavigation';
 
 const MainLayout = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
+  return (
+    <>
+      <MainNavigation />
+      <Wrapper>{children}</Wrapper>
+    </>
+  );
 };
 
 const Wrapper = styled.main`
