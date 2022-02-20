@@ -1,11 +1,17 @@
+import { FC } from 'react';
 import styled from 'styled-components';
 import { MainNavigation } from '../MainNavigation/MainNavigation';
 
-const MainLayout = ({ children }) => {
+interface MainLayoutProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const MainLayout: FC<MainLayoutProps> = ({ children, className }) => {
   return (
     <>
       <MainNavigation />
-      <Wrapper>{children}</Wrapper>
+      <Wrapper className={className}>{children}</Wrapper>
     </>
   );
 };
