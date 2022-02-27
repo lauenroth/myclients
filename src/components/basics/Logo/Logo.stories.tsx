@@ -17,8 +17,8 @@ export default {
 
 export const Dashboard = (args) => <Logo type="dashboard" {...args} />;
 
-export const Clients = () => <Logo type="clients" />;
+export const Clients = (args) => <Logo type="clients" {...args} />;
 
-export const TimeTracking = () => <Logo type="timeTracking" />;
+export const TimeTracking = (args) => <Logo type="timeTracking" {...args} />;
 
-export const Invoices = () => <Logo type="invoices" />;
+export const Invoices = (args) => <Logo type="invoices" {...args} />;

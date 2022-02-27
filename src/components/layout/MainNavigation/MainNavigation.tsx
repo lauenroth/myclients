@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import styled from 'styled-components';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Logo } from '../../basics/Logo/Logo';
 
 const user = {
   name: 'Tom Cook',
@@ -12,10 +13,10 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 };
 const navigation = [
-  { name: 'Dashboard', href: '/' },
-  { name: 'Clients', href: '/clients' },
-  { name: 'Invoices', href: '/invoices' },
-  { name: 'Time Tracking', href: '/time-tracking' },
+  { name: 'Dashboard', href: '/', slug: 'dashboard' },
+  { name: 'Clients', href: '/clients', slug: 'clients' },
+  { name: 'Invoices', href: '/invoices', slug: 'invoices' },
+  { name: 'Time Tracking', href: '/time-tracking', slug: 'timeTracking' },
 ];
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -30,6 +31,8 @@ function classNames(...classes) {
 const MainNavigation = () => {
   const router = useRouter();
 
+  const current = navigation.find((item) => item.href === router.pathname);
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -37,9 +40,11 @@ const MainNavigation = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
-                <div className="flex-shrink-0">
+                <Logo type={current.slug} />
+
+                {/* <div className="flex-shrink-0">
                   <img className="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" />
-                </div>
+                </div> */}
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
                     {navigation.map((item) => (

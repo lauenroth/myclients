@@ -15,7 +15,7 @@ const Logo: FC<LogoProps> = ({ type }) => {
 
 const LogoWrapper = styled.div<LogoProps>`
   ${({ type }) => css`
-    background-color: #ccc;
+    background-color: #fff;
     display: flex;
     height: 45px;
     overflow: hidden;
@@ -34,6 +34,7 @@ const LogoWrapper = styled.div<LogoProps>`
     span {
       display: block;
       position: absolute;
+      transition: all 0.25s ease-in-out;
     }
 
     ${type === 'dashboard' &&
@@ -41,34 +42,34 @@ const LogoWrapper = styled.div<LogoProps>`
       &::before {
         background-color: #6466f0;
         border-radius: 3px;
-        height: 14px;
+        height: 12px;
         left: 3px;
-        top: 3px;
+        top: 8px;
         width: 18px;
       }
 
       &::after {
         background-color: #6466f0;
         border-radius: 3px;
-        height: 14px;
+        height: 12px;
         right: 3px;
-        top: 3px;
+        top: 8px;
         width: 18px;
       }
 
       span {
         background-color: #6466f0;
         border-radius: 3px;
-        height: 14px;
+        height: 12px;
         left: 3px;
-        top: 20px;
+        top: 25px;
         width: 18px;
       }
 
       span::after {
         background-color: #6466f0;
         border-radius: 3px;
-        height: 14px;
+        height: 12px;
         left: 21px;
         top: 0;
         width: 18px;
@@ -125,6 +126,7 @@ const LogoWrapper = styled.div<LogoProps>`
 
       span::before {
         background-color: #6466f0;
+        border-radius: 3px;
         height: 14px;
         left: 14px;
         top: 0;
