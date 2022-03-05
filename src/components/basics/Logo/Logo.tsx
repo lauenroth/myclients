@@ -18,7 +18,7 @@ const Logo: FC<LogoProps> = ({ type }) => {
 const LogoWrapper = styled.div<LogoProps>`
   ${({ type }) => css`
     background-color: rgba(100, 100, 100, 0.3);
-    border-radius: 4px;
+    border-radius: 6px;
     display: flex;
     height: 45px;
     overflow: hidden;
@@ -143,6 +143,49 @@ const LogoWrapper = styled.div<LogoProps>`
         left: 2px;
         top: 20px;
         width: 8px;
+      }
+    `}
+
+    ${type === 'invoices' &&
+    css`
+      &::before {
+        background-color: rgba(100, 102, 240, 0.5);
+        border-radius: 4px;
+        height: 34px;
+        left: 5px;
+        top: 5px;
+        width: 34px;
+      }
+
+      &::after {
+        background-color: #6466f0;
+        height: 5px;
+        left: 10px;
+        top: 10px;
+        width: 25px;
+      }
+
+      span {
+        background-color: #6466f0;
+        height: 5px;
+        left: 10px;
+        top: 20px;
+        width: 20px;
+      }
+
+      span::before {
+        background-color: #6466f0;
+        height: 5px;
+        left: 0;
+        top: 10px;
+        width: 10px;
+      }
+      span::after {
+        background-color: #6466f0;
+        height: 5px;
+        left: 15px;
+        top: 10px;
+        width: 10px;
       }
     `}
   `}
