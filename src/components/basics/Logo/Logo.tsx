@@ -43,39 +43,39 @@ const LogoWrapper = styled.div<LogoProps>`
     ${type === 'dashboard' &&
     css`
       &::before {
-        background-color: #6466f0;
+        background-color: rgba(100, 102, 240, 0.5);
         border-radius: 3px;
-        height: 12px;
-        left: 4px;
-        top: 8px;
-        width: 16px;
+        height: 15px;
+        left: 5px;
+        top: 5px;
+        width: 15px;
       }
 
       &::after {
         background-color: #6466f0;
         border-radius: 3px;
-        height: 12px;
-        right: 4px;
-        top: 8px;
-        width: 16px;
+        height: 15px;
+        right: 5px;
+        top: 5px;
+        width: 15px;
       }
 
       span {
         background-color: #6466f0;
         border-radius: 3px;
-        height: 12px;
-        left: 4px;
+        height: 15px;
+        left: 5px;
         top: 25px;
-        width: 16px;
+        width: 15px;
       }
 
       span::after {
-        background-color: #6466f0;
+        background-color: rgba(100, 102, 240, 0.5);
         border-radius: 3px;
-        height: 12px;
-        left: 21px;
+        height: 15px;
+        left: 20px;
         top: 0;
-        width: 16px;
+        width: 15px;
       }
     `}
 
