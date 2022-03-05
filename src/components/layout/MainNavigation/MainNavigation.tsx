@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Fragment } from 'react';
-import styled from 'styled-components';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Logo } from '../../basics/Logo/Logo';
+import { Logo, LogoType } from '../../basics/Logo/Logo';
 
 const user = {
   name: 'Tom Cook',
@@ -40,7 +39,7 @@ const MainNavigation = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
-                <Logo type={current.slug} />
+                <Logo type={current.slug as LogoType} />
 
                 {/* <div className="flex-shrink-0">
                   <img className="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" />

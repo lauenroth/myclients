@@ -1,8 +1,10 @@
 import { FC } from 'react';
 import styled, { css } from 'styled-components';
 
+export type LogoType = 'dashboard' | 'clients' | 'invoices' | 'timeTracking';
+
 interface LogoProps {
-  type: 'dashboard' | 'timeTracking' | 'invoices' | 'clients';
+  type: LogoType;
 }
 
 const Logo: FC<LogoProps> = ({ type }) => {
@@ -15,7 +17,8 @@ const Logo: FC<LogoProps> = ({ type }) => {
 
 const LogoWrapper = styled.div<LogoProps>`
   ${({ type }) => css`
-    background-color: #fff;
+    background-color: rgba(100, 100, 100, 0.3);
+    border-radius: 4px;
     display: flex;
     height: 45px;
     overflow: hidden;
@@ -43,27 +46,27 @@ const LogoWrapper = styled.div<LogoProps>`
         background-color: #6466f0;
         border-radius: 3px;
         height: 12px;
-        left: 3px;
+        left: 4px;
         top: 8px;
-        width: 18px;
+        width: 16px;
       }
 
       &::after {
         background-color: #6466f0;
         border-radius: 3px;
         height: 12px;
-        right: 3px;
+        right: 4px;
         top: 8px;
-        width: 18px;
+        width: 16px;
       }
 
       span {
         background-color: #6466f0;
         border-radius: 3px;
         height: 12px;
-        left: 3px;
+        left: 4px;
         top: 25px;
-        width: 18px;
+        width: 16px;
       }
 
       span::after {
@@ -72,7 +75,7 @@ const LogoWrapper = styled.div<LogoProps>`
         height: 12px;
         left: 21px;
         top: 0;
-        width: 18px;
+        width: 16px;
       }
     `}
 
@@ -87,7 +90,7 @@ const LogoWrapper = styled.div<LogoProps>`
         width: 25px;
       }
 
-      span::after {
+      span {
         background-color: #6466f0;
         border-radius: 50%;
         height: 45px;

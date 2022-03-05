@@ -1,5 +1,5 @@
 import Head from 'next/head';
-// import { MainLayout } from '../components/layout/MainLayout/MainLayout';
+import { DashboardInvoices, DashboardTimeTracking } from '../components/dashboard';
 
 const people = [
   {
@@ -14,7 +14,7 @@ const people = [
   // More people...
 ];
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <>
       <Head>
@@ -24,12 +24,9 @@ export default function Home() {
       </Head>
 
       <section className="grid grid-cols-2 gap-6">
-        <section className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-          <h2 className="text-l">Time Tracking</h2>
-        </section>
-        <section className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-          <h2 className="text-l">Invoices</h2>
-        </section>
+        <DashboardTimeTracking />
+
+        <DashboardInvoices />
       </section>
 
       <div className="flex flex-col">
