@@ -24,13 +24,13 @@ export default function Dashboard() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className="grid grid-cols-2 gap-6">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <DashboardTimeTracking />
 
         <DashboardInvoices />
       </section>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col" style={{ display: 'none' }}>
         <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
