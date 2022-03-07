@@ -21,8 +21,6 @@ export default function ClientsPage() {
         <title>Clients | MyClients</title>
       </Head>
 
-      <h1 className="text-3xl font-bold">Clients</h1>
-
       <Table fields={['Name']} data={clients} />
     </>
   );

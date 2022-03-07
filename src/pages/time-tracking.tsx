@@ -8,7 +8,10 @@ export default function TimeTrackingPage() {
         <title>Time Tracking | MyClients</title>
       </Head>
 
-      <h1 className="text-3xl font-bold">Time tracking</h1>
+      <section className="grid place-content-center" style={{ height: '85vh' }}>
+        <h1 className="text-2xl md:text-5xl">Time Tracking</h1>
+      </section>
+
       <FloatingButton onClick={() => console.log('click')} />
     </>
   );
