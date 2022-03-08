@@ -10,6 +10,7 @@ type ClientData = {
   phone?: string;
   address?: string;
   country?: string;
+  logo?: string;
 };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<ClientData[]>) {
