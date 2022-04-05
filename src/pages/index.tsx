@@ -4,13 +4,12 @@ import { DashboardInvoices, DashboardTimeTracking } from '../components/dashboar
 
 const people = [
   {
-    name: 'Jane Cooper',
-    title: 'Regional Paradigm Technician',
+    name: 'Jörg Lauenroth',
+    title: 'Front-end Developer',
     department: 'Optimization',
     role: 'Admin',
-    email: 'jane.cooper@example.com',
-    image:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+    email: 'joerg@lauenroth.org',
+    image: 'https://xn--jrg-sna.dev/static/jorg-29ca016ac01ed3bc37aa690f6827d3f5.webp',
   },
   // More people...
 ];
