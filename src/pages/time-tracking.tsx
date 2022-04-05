@@ -1,8 +1,12 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import CenterText from '../components/basics/CenterText';
 import { FloatingButton } from '../components/basics/FloatingButton/FloatingButton';
+import { NewTrackingForm } from '../components/timetracking/NewTrackingForm/NewTrackingForm';
 
 export default function TimeTrackingPage() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -11,7 +15,9 @@ export default function TimeTrackingPage() {
 
       <CenterText>Time tracking</CenterText>
 
-      <FloatingButton onClick={() => console.log('click')} />
+      <NewTrackingForm open={isOpen} onClose={() => setIsOpen(false)} />
+
+      <FloatingButton onClick={() => setIsOpen(true)} />
     </>
   );
 }
