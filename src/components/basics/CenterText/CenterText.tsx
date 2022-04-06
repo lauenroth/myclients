@@ -1,4 +1,6 @@
-const CenterText = ({ children }) => (
+import { FC } from 'react';
+
+const CenterText: FC = ({ children }) => (
   <section className="grid place-content-center" style={{ height: '85vh' }}>
     <h1 className="text-2xl md:text-5xl">{children}</h1>
   </section>
