@@ -32,7 +32,7 @@ const Table: FC<TableProps> = ({ fields, data }) => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {data.map((row, index) => (
+                {data?.map((row, index) => (
                   <tr key={`table-row-${index}`}>
                     {row.map((cell, index) => (
                       <td key={`table-cell-${index}`} className="px-6 py-4 whitespace-nowrap">

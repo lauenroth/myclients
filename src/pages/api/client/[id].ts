@@ -1,8 +1,15 @@
-export default function clientHandler(req, res) {
-  const {
-    query: { id, name },
-    method,
-  } = req;
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export interface ClientResponse {
+  id: string;
+  name: string;
+  language?: string;
+}
+
+export default function clientHandler(req: NextApiRequest, res: NextApiResponse<ClientResponse>) {
+  const { method } = req;
+  const id = req.query.id as string;
+  const name = req.query.name as string;
 
   switch (method) {
     case 'GET':

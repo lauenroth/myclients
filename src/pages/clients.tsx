@@ -3,12 +3,13 @@ import { useEffect, useState } from 'react';
 import CenterText from '../components/basics/CenterText';
 import { FloatingButton } from '../components/basics/FloatingButton/FloatingButton';
 import Loading from '../components/basics/Loading';
-import { Table } from '../components/basics/Table/Table';
+import { Table, TableData } from '../components/basics/Table/Table';
 import NewClientForm from '../components/clients/NewClientForm';
+import { ClientResponse } from './api/client/[id]';
 
 export default function ClientsPage() {
   const [isLoading, setIsLoading] = useState(true);
-  const [clients, setClients] = useState([]);
+  const [clients, setClients] = useState([] as TableData[][]);
   const [showNewClientForm, setShowNewClientForm] = useState(false);
 
   /**
@@ -18,15 +19,15 @@ export default function ClientsPage() {
     setIsLoading(true);
     setTimeout(async () => {
       const response = await fetch(`${process.env.API}/clients`);
-      const json = await response.json();
-      const clients = json.map((client) => [
+      const json: ClientResponse[] = await response.json();
+      const clients: TableData[][] = json.map((client) => [
         {
           id: 'name',
           value: client.name,
         },
         {
           id: 'language',
-          value: client.language,
+          value: client.language || 'en',
         },
       ]);
       setClients(clients);
