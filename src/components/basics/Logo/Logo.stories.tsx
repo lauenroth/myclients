@@ -15,10 +15,10 @@ export default {
   },
 } as ComponentMeta<typeof Logo>;
 
-export const Dashboard = (args) => <Logo type="dashboard" {...args} />;
+export const Dashboard = () => <Logo type="dashboard" />;
 
-export const Clients = (args) => <Logo type="clients" {...args} />;
+export const Clients = () => <Logo type="clients" />;
 
-export const TimeTracking = (args) => <Logo type="timeTracking" {...args} />;
+export const TimeTracking = () => <Logo type="timeTracking" />;
 
-export const Invoices = (args) => <Logo type="invoices" {...args} />;
+export const Invoices = () => <Logo type="invoices" />;
